@@ -1,0 +1,98 @@
+.cenario {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.tela-inicial {
+    position: absolute;
+
+    left: 15%;
+    top: 60%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+.tela-inicial p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tela-inicial button {
+    padding: 12px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.trilhos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.trem {
+    position: absolute;
+    width: 250px;
+    height: auto;
+
+    /* posição inicial */
+    left: 100px;
+    top: 25px;
+}
+
+.boneco-alavanca {
+    position: absolute;
+    width: 150px;
+    height: auto;
+
+    left: 450px;
+    top: 42px;
+}
+
+.botoes {
+    position: absolute;
+
+    left: 30px;
+    top: 500px;
+
+    display: none;
+    gap: 20px;
+}
+
+.botoes.visivel {
+    display: flex;
+}
+
+.botoes button {
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botoes button:hover {
+    transform: scale(1.05);
+}
+
+.botoes button:active {
+    transform: scale(0.95);
+}
