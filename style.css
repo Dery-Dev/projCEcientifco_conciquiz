@@ -35,6 +35,14 @@
 
     cursor: pointer;
 }
+.trilhos,
+.trem,
+.boneco-alavanca {
+    display: none;
+}
+.visivel { 
+    display: block;
+}
 
 .trilhos {
     position: absolute;
