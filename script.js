@@ -2,11 +2,13 @@
 const telaInicial = document.getElementById("telaInicial");
 const botaoComecar = document.getElementById("botaoComecar");
 const botoes = document.getElementById("botoes");
+const botaonext = document.getElementById("botoes2")
 
 // Seleção dos elementos do cenário do jogo
 const trilhos = document.querySelector(".trilhos");
 const trem = document.querySelector(".trem");
 const bonecoAlavanca = document.querySelector(".boneco-alavanca");
+const bonecoAlavanca1 = document.querySelector(".boneco-alavanca1")
 
 botaoComecar.addEventListener("click", function() {
 
@@ -22,5 +24,15 @@ botaoComecar.addEventListener("click", function() {
 
 var botaoPuxar = document.getElementById("puxar");
 var botaoNaoPuxar = document.getElementById("nao-puxar");
-function continuar() { 
+function virar() { 
+    bonecoAlavanca.style.display = "none";
+    bonecoAlavanca1.classList.add("visivel1")
+    botaonext.classList.add("visivel2")
+
+}
+function continuar() {
+botaonext.classList.add("visivel2")
+}
+function next() {
+
 }

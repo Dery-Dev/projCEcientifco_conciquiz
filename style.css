@@ -1,3 +1,12 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 .cenario {
     position: relative;
     width: 100%;
@@ -7,34 +16,52 @@
 
 .tela-inicial {
     position: absolute;
+    inset: 0;
 
-    left: 15%;
-    top: 60%;
+    background-color: #F5F0E6;
 
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     text-align: center;
-
     z-index: 10;
 }
 
-.tela-inicial p {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
-.tela-inicial button {
-    padding: 12px 30px;
-
+#botaoComecar {
+    background: none;
     border: none;
-    border-radius: 8px;
-
-    font-size: 20px;
-    font-weight: bold;
-
+    padding: 0;
     cursor: pointer;
 }
+
+#botaoComecar img {
+    width: 300px;
+    height: auto;
+    display: block;
+
+    transition: 0.2s;
+}
+
+#botaoComecar:hover img {
+    transform: scale(1.05);
+}
+
+#botaoComecar:active img {
+    transform: scale(0.95);
+}
+ 
+.titulo-jogo {
+    width: 750px;
+    height: auto;
+
+
+    margin-bottom: 30px;
+}
+
+
 .trilhos,
 .trem,
 .boneco-alavanca {
@@ -44,6 +71,19 @@
     display: block;
 }
 
+.botoes2 {
+    display: none;
+}
+.visivel2 { 
+    display: block;
+}
+
+.boneco-alavanca1 {
+    display: none;
+}
+.visivel1 {
+    display: block;
+}
 .trilhos {
     position: absolute;
     width: 100%;
@@ -61,6 +101,14 @@
 }
 
 .boneco-alavanca {
+    position: absolute;
+    width: 150px;
+    height: auto;
+
+    left: 450px;
+    top: 42px;
+}
+.boneco-alavanca1 {
     position: absolute;
     width: 150px;
     height: auto;
@@ -102,5 +150,36 @@
 }
 
 .botoes button:active {
+    transform: scale(0.95);
+}
+.botoes2 {
+        position: absolute;
+
+    left: 30px;
+    top: 500px;
+
+    display: none;
+    gap: 20px;
+}
+.botoes2.visivel2 {
+        display: flex;
+}
+.botoes2 button {
+        padding: 15px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+.botoes2 button:hover {
+    transform: scale(1.05);
+}
+.botoes2.button:active {
     transform: scale(0.95);
 }

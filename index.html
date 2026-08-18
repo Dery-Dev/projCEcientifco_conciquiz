@@ -10,20 +10,25 @@
       <div class="cenario">
                                 <!-- Tela inicial -->
          <div class="tela-inicial" id="telaInicial">
-           <p>Vamos jogar?</p>
-           <button id="botaoComecar">Iniciar</button>
+           <img src="logo ConciQuiz.png" class="titulo-jogo">
+           <button id="botaoComecar">
+            <img src="iniciar_conciQuiz.png" alt="iniciar"></button>
          </div>
 
                                 <!--Elementos do jogo-->
            <img src="track.svg" class="trilhos">
            <img src="trolley.svg" class="trem">
-           <img src="you (1).svg" class="boneco-alavanca">
+           <img src="you.svg" class="boneco-alavanca">
+           <img src="you (1).svg" class="boneco-alavanca1">
 
                                 <!--Botões de resposta-->
 
          <div class="botoes" id="botoes">
-           <button id="puxar" value="puxou" onclick="continuar()">Puxar a alavanca</button>
-           <button id="nao-puxar" value="n.puxou" onclick="virar()">Não puxar</button>
+           <button id="puxar" value="puxou" onclick="virar()">Puxar a alavanca</button>
+           <button id="nao-puxar" value="n.puxou" onclick="continuar()">Não puxar</button>
+         </div>
+         <div class="botoes2" id="botoes2">
+            <button id="next" value="proxima.p" onclick="next()">Next</button>
          </div>
       </div>
      <script src="script.js"></script>
