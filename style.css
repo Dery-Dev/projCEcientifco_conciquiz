@@ -152,7 +152,34 @@ body {
 .botoes button:active {
     transform: scale(0.95);
 }
-.botoes2 {
+
+.pergunta {
+    position: absolute;
+
+    left: 30px;
+    top: 330px;
+
+    width: 500px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.next {
         position: absolute;
 
     left: 30px;
@@ -161,10 +188,12 @@ body {
     display: none;
     gap: 20px;
 }
-.botoes2.visivel2 {
+
+.next.visivel2 {
         display: flex;
 }
-.botoes2 button {
+
+.next button {
         padding: 15px 25px;
 
     border: none;
@@ -177,9 +206,11 @@ body {
 
     transition: 0.2s;
 }
-.botoes2 button:hover {
+
+.next button:hover {
     transform: scale(1.05);
 }
-.botoes2.button:active {
+
+.next.button:active {
     transform: scale(0.95);
 }
