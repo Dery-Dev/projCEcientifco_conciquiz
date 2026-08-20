@@ -53,18 +53,28 @@ botaoComecar.addEventListener("click", function() {
     trilhos.style.display = "block";
     trem.style.display = "block";
     bonecoAlavanca.style.display = "block";
+<<<<<<< HEAD
 
 
     botoes.classList.add("visivel");
 
+=======
+
+
+    botoes.classList.add("visivel");
+
+>>>>>>> 02fb07c924e9f8750364cd0e0284612dc195ea73
     mostrarPergunta();
 
 });
 
+<<<<<<< HEAD
 function virar() { 
     bonecoAlavanca.style.display = "none";
     bonecoAlavanca1.classList.add("visivel1") 
 }
+=======
+>>>>>>> 02fb07c924e9f8750364cd0e0284612dc195ea73
 
 // ESCOLHA: PUXAR
 
@@ -85,8 +95,12 @@ botaoNaoPuxar.addEventListener("click", function() {
 function iniciarTurno() {
 
     botoes.classList.remove("visivel");
+<<<<<<< HEAD
  bonecoAlavanca1.style.display = "none";
  bonecoAlavanca1.style.display = "block"
+=======
+
+>>>>>>> 02fb07c924e9f8750364cd0e0284612dc195ea73
     // simula a animação do trem
     setTimeout(function() {
 
@@ -102,7 +116,10 @@ function iniciarTurno() {
 botaoNext.addEventListener("click", function() {
 
     botaoNext.style.display = "none";
+<<<<<<< HEAD
     bonecoAlavanca1.style.display = "none";
+=======
+>>>>>>> 02fb07c924e9f8750364cd0e0284612dc195ea73
 
     perguntaAtual++;
 
@@ -111,7 +128,10 @@ botaoNext.addEventListener("click", function() {
         mostrarPergunta();
 
         botoes.classList.add("visivel");
+<<<<<<< HEAD
         bonecoAlavanca.style.display = "block"
+=======
+>>>>>>> 02fb07c924e9f8750364cd0e0284612dc195ea73
     }
     else {
 
