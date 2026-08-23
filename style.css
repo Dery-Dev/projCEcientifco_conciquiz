@@ -88,6 +88,11 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
+    top: 0;
+
+    display: none;
+    z-index: 1;
 }
 
 .trem {
@@ -98,6 +103,7 @@ body {
     /* posição inicial */
     left: 100px;
     top: 25px;
+    z-index: 3;
 }
 
 .boneco-alavanca {
@@ -105,8 +111,9 @@ body {
     width: 150px;
     height: auto;
 
-    left: 450px;
+    left:450px;
     top: 42px;
+    z-index: 3;
 }
 .boneco-alavanca1 {
     position: absolute;
@@ -115,6 +122,7 @@ body {
 
     left: 450px;
     top: 42px;
+    z-index: 3;
 }
 
 .botoes {
@@ -125,6 +133,7 @@ body {
 
     display: none;
     gap: 20px;
+    z-index: 30;
 }
 
 .botoes.visivel {
@@ -143,6 +152,7 @@ body {
     cursor: pointer;
 
     transition: 0.2s;
+    z-index: 30;
 }
 
 .botoes button:hover {
@@ -199,6 +209,7 @@ body {
 
     display: none;
     gap: 20px;
+    z-index: 30;
 }
 
 .next.visivel2 {
@@ -217,6 +228,7 @@ body {
     cursor: pointer;
 
     transition: 0.2s;
+    z-index: 30;
 }
 
 .next button:hover {
@@ -226,3 +238,109 @@ body {
 .next.button:active {
     transform: scale(0.95);
 }
+
+.pessoas {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+}
+
+#cincoPessoas {
+    width: 180px;
+    left: 800px;
+    top: 320px;
+    z-index: 2;
+}
+
+#cincodormindo {
+    width: 180px;
+    left: 800px;
+    top: 300px;
+    z-index: 2;
+}
+
+#idosos {
+    width: 190px;
+    left: 800px;
+    top: 310px;
+    z-index: 2;
+}
+
+#umaPessoa {
+    width: 100px;
+    left: 900px;
+    top: 90px;
+    z-index: 2;
+}
+
+#politic {
+    width: 100px;
+    left: 800px;
+    top: 310px;
+    z-index: 2;
+}
+
+#cat {
+    width: 120px;
+    left: 980px;
+    top: 90px;
+    z-index: 2;
+}
+
+#monalisa {
+    width: 100px;
+    left: 900px;
+    top: 59px;
+    z-index: 2;
+}
+
+#enemy {
+    width: 100px;
+    left: 800px;
+    top: 310px;
+    z-index: 2;
+}
+
+#pessoaRica {
+    width: 100px;
+    left: 900px;
+    top: 90px;
+    z-index: 2;
+}
+
+/* Estilo das Telas Finais */
+.final1, 
+.final2, 
+.final3 {
+    position: absolute;
+    inset: 0;
+    
+    display: none; /* O JS muda para 'flex' no fim */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 50;
+
+}
+
+/* Zera margens do navegador para não descentralizar */
+.final1 h1, .final2 h1, .final3 h1 {
+    font-size: 48px;
+    margin: 0 0 15px 0;
+    font-family: sans-serif;
+}
+
+.final1 h2, .final2 h2, .final3 h2 {
+    font-family: sans-serif;
+    color: #333;
+    margin: 0 0 25px 0;
+}
+
+/* Cores dos títulos */
+.final1 h1 { color: #2e7d32; }
+.final2 h1 { color: #f57c00; }
+.final3 h1 { color: #c62828; }
