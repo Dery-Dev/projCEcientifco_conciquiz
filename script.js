@@ -161,7 +161,7 @@ botaoComecar.addEventListener("click", function() {
     trem.style.display = "block";
     bonecoAlavanca.style.display = "block";
 
-
+ 
     botoes.classList.add("visivel");
 
     mostrarPergunta();
