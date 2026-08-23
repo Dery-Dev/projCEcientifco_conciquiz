@@ -20,18 +20,111 @@ const trilhos = document.querySelector(".trilhos");
 const trem = document.querySelector(".trem");
 const bonecoAlavanca = document.querySelector(".boneco-alavanca");
 const bonecoAlavanca1 = document.querySelector(".boneco-alavanca1");
+// PESSOAS
+
+const cincoPessoas = document.getElementById("cincoPessoas");
+const umaPessoa = document.getElementById("umaPessoa");
+const pessoaRica = document.getElementById("pessoaRica");
+const monalisa = document.getElementById("monalisa");
+const cincodormindo = document.getElementById("cincodormindo")
+const idosos = document.getElementById("idosos")
+const enemy = document.getElementById("enemy")
+const cat = document.getElementById("cat")
+const politic = document.getElementById("politic")
+
+function esconderPessoas() {
+    cincoPessoas.style.display = "none";
+    umaPessoa.style.display = "none";
+    pessoaRica.style.display = "none";
+    monalisa.style.display = "none";
+    cincodormindo.style.display = "none";
+    idosos.style.display = "none";
+    enemy.style.display = "none";
+    cat.style.display = "none";
+    politic.style.display = "none";
+}
+        esconderPessoas();
+
+    // MOSTRAR AS PESSOAS DE ACORDO COM A PERGUNTA
+function mostrarPessoas() {
+
+    esconderPessoas();
+
+    // PERGUNTA 1
+    if (perguntaAtual === 0) {
+
+        cincoPessoas.style.display = "block";
+        umaPessoa.style.display = "block";
+
+    }
+
+    // PERGUNTA 2
+    else if (perguntaAtual === 1) {
+
+        cincodormindo.style.display = "block";
+        umaPessoa.style.display = "block";
+
+    }
+
+    // PERGUNTA 3
+    else if (perguntaAtual === 2) {
+
+        idosos.style.display = "block";
+        umaPessoa.style.display = "block";
+
+    }
+
+    // PERGUNTA 4
+    else if (perguntaAtual === 3) {
+
+        politic.style.display = "block";
+        umaPessoa.style.display = "block";
+
+    }
+
+    // PERGUNTA 5
+    else if (perguntaAtual === 4) {
+
+        idosos.style.display = "block";
+        cat.style.display = "block";
+
+    }
+
+    // PERGUNTA 6
+    else if (perguntaAtual === 5) {
+
+        politic.style.display = "block";
+        monalisa.style.display = "block";
+
+    }
+
+    // PERGUNTA 7
+    else if (perguntaAtual === 6) {
+
+        enemy.style.display = "block";
+        pessoaRica.style.display = "block";
+
+    }
+}
 
 
 // PERGUNTAS
 
 const perguntas = [
-    "Pergunta de teste 1",
-    "Pergunta de teste 2",
-    "O trem vai passar em cima de 5 idosos inocentes, se você puxar a alavanca, o trem passará por cima de um parente aleatório seu.",
-    "O trem passará por cima de 10 políticos corruptos, que se forem mortos, farão você ser caçado por todo o país se você puxar a alavanca, o trem matará um político honesto que governava uma cidade em ascensão",
-    "O trem vai passar por cima de uma caixa que possui uma chance de ter um animal aleatório lá dentro, se você puxar a alavanca, o trem passará por cima de um biólogo que acabou de descobrir uma nova espécie que ainda não foi catalogada.",
-    "O trem passará por cima de 5 pessoas com uma doença rara, se você puxar a alavanca,o trem passará por cima do único médico que pode curar pessoas com esse tipo de doença de graça. (elas não são as únicas no mundo com essa doença)",
-    "O trem passará por cima de 100 pessoas completamente inocentes, se você puxar a alavanca, o trem passará por cima da sua mãe e de seu pai."
+    "Um trem está indo em direção a 5 pessoas. Você pode puxar a alavanca para desvia-lo para o outro trilho, matando 1 pessoa, você puxa a alavanca?",
+
+    "O trem está indo em direção a 5 pessoas dormindo. Você pode puxar a alavanca para desvia-lo para o outro trilho, matando 1 pessoa acordada, Você puxa a alavanca?",
+
+    "O trem vai passar em cima de 5 idosos , se você puxar a alavanca, o trem passará por cima de um parente aleatório seu.",
+
+    "O trem passará por cima de 1 político , que se for morto fará você ser caçado por todo o país, se você puxar a alavanca, o trem matará uma pessoa aleatória.",
+
+    "O trem vai passar por cima de cinco idosos, se você puxar a alavanca, o trem passará por cima de um adoravel gatinho.",
+
+    "O trem passará por cima de 1 politico corrupto , se você puxar a alavanca,o trem não passará por cima da copia original monalisa.",
+
+    "O trem passará por cima do seu maior inimigo, se você puxar a alavanca, o trem passará por cima de um homem rico que realiza praticas criminosas, mas te oferece 1 milhão."
+
 ];
 
 let perguntaAtual = 0;
@@ -62,6 +155,7 @@ botaoComecar.addEventListener("click", function() {
     botoes.classList.add("visivel");
 
     mostrarPergunta();
+    mostrarPessoas();
 
 });
 
@@ -126,6 +220,8 @@ botaoNext.addEventListener("click", function() {
     if (perguntaAtual < perguntas.length) {
 
         mostrarPergunta();
+        mostrarPessoas();
+
 
         botoes.classList.add("visivel");
        bonecoAlavanca.style.display = "block" 
@@ -143,3 +239,6 @@ botaoNext.addEventListener("click", function() {
 
 });
 
+console.log(cincoPessoas);
+console.log(umaPessoa);
+console.log(politic);
