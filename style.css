@@ -177,21 +177,28 @@ body {
     text-align: center;
 }
 
-.pontuação {
-        position: absolute;
-
-    left: 500px;
-    bottom: 50px;
-
-    width: 800px;
-
+.pontuação.tela-final {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    margin: 0;
+    z-index: 60;
+        font-size: 24px;
+    font-weight: bold;
     font-size: 24px;
     font-weight: bold;
 
     text-align: center;
 }
 
-
+.pontuação {
+     font-size: 24px;
+    font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
+}
 
 
 
@@ -342,5 +349,6 @@ body {
 
 /* Cores dos títulos */
 .final1 h1 { color: #2e7d32; }
-.final2 h1 { color: #f57c00; }
+.final2 h1 { color: #f57c00; }            
 .final3 h1 { color: #c62828; }
+

@@ -144,6 +144,7 @@ let perguntaAtual = 0;
 
 function mostrarPergunta() {
     pergunta.textContent = perguntas[perguntaAtual];
+    pontos.style.display = "flex"
 }
 
 //Pontuação 
@@ -237,12 +238,16 @@ botaoNext.addEventListener("click", function() {
         bonecoAlavanca1.style.display = "none"
         enemy.style.display = "none";
         pessoaRica.style.display = "none";
+
+        // Centraliza os pontos na tela final
+        pontos.classList.add("tela-final");
+
         if (ponto == 7) {
-        telafinal1.style.display = "block"
+        telafinal1.style.display = "flex"
         } else if (ponto < 7 && ponto > 3){ 
-            telafinal2.style.display = "block"; 
+            telafinal2.style.display = "flex"; 
         } else {
-            telafinal3.style.display = "block"
+            telafinal3.style.display = "flex"
         }
     }
 
@@ -268,3 +273,4 @@ function iniciarTurno() {
 console.log(cincoPessoas);
 console.log(umaPessoa);
 console.log(politic);
+
