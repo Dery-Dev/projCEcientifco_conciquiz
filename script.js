@@ -123,17 +123,17 @@ function mostrarPessoas() {
 const perguntas = [
     "Um trem está indo em direção a 5 pessoas. Você pode puxar a alavanca para desvia-lo para o outro trilho, matando 1 pessoa, você puxa a alavanca?",
 
-    "O trem está indo em direção a 5 pessoas dormindo. Você pode puxar a alavanca para desvia-lo para o outro trilho, matando 1 pessoa inocente que tem uma família acordada, Você puxa a alavanca?",
+    "O trem está indo em direção a 5 pessoas dormindo. Você pode puxar a alavanca para desvia-lo para o outro trilho, matando 1 pessoa inocente, você puxa a alavanca?",
 
-    "O trem vai passar em cima de 5 idosos que se viver terão apenas no maxímo 2 anos a mais de vida , se você puxar a alavanca, o trem passará por cima de um parente seu, podendo ser seu pai, tio ou avô.",
+    "O trem vai passar em cima de 5 idosos que se sairem vivos terão apenas mais 2 anos de vida no máximo, se você puxar a alavanca, o trem passará por cima de um parente seu.",
 
-    "O trem passará por cima de 1 político que rouba e roubou milhões de pessoas , que se for morto fará você que estava perto ser caçado por todo o país, se você puxar a alavanca, o trem matará uma pessoa completamente inocente vitíma desse político.",
+    "O trem passará por cima de 1 político que roubou milhões, que se morrer fará você ser caçado por todo o país, se você puxar a alavanca, o trem matará uma pessoa completamente inocente.",
 
-    "O trem vai passar por cima de cinco idosos que não viveram até o final do ano, se você puxar a alavanca, o trem passará por cima de um adoravel gatinho e seu dono que ainda irá viver 50 anos.",
+    "O trem vai passar por cima de cinco idosos que não viveram até o final do ano, se você puxar a alavanca, o trem passará por cima de um adoravel gatinho e seu dono, você puxa a alavanca?",
 
-    "O trem passará por cima de 1 politico corrupto , se você puxar a alavanca,o trem passará por cima da monalisa original e que você pagara pela destruição dela.",
+    "O trem passará por cima de 1 politico corrupto, se você puxar a alavanca, o trem passará por cima da monalisa original e que você pagara pela destruição dela.",
 
-    "O trem passará por cima do seu maior inimigo, o qual matou a pessoa que você mais amava num acidente, se você puxar a alavanca, o trem passará por cima de um homem rico que realiza praticas criminosas, inncluindo assassinato, mas te oferece 1 milhão se sobreviver."
+    "O trem vai matar seu maior inimigo (que matou seu maior amor acidentalmente). Puxando a alavanca, ele desvia para um criminoso rico que te oferece 1 milhão para sobreviver. Você puxa a alavanca?"
 
 ];
 

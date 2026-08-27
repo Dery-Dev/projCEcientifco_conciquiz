@@ -12,6 +12,7 @@ body {
     width: 100%;
     height: 600px;
     overflow: hidden;
+    background-color:#ffffff;
 }
 
 .tela-inicial {
@@ -128,8 +129,10 @@ body {
 .botoes {
     position: absolute;
 
-    left: 30px;
-    top: 500px;
+    left: 90px;
+    top: 520px;
+
+   
 
     display: none;
     gap: 20px;
@@ -151,6 +154,8 @@ body {
 
     cursor: pointer;
 
+    background-color: aqua;
+
     transition: 0.2s;
     z-index: 30;
 }
@@ -164,7 +169,10 @@ body {
 }
 
 .pergunta {
+    border-radius: 10px;
     position: absolute;
+
+    font: medium;
 
     left: 30px;
     top: 330px;
@@ -174,7 +182,12 @@ body {
     font-size: 24px;
     font-weight: bold;
 
-    text-align: center;
+    text-align: left;
+
+    z-index: 2;
+
+    padding: 20px;
+    background-color: rgb(156, 221, 222);
 }
 
 .pontuação.tela-final {
@@ -206,13 +219,11 @@ body {
 
 
 
-
-
 .next {
         position: absolute;
 
-    left: 30px;
-    top: 500px;
+    left: 220px;
+    top: 520px;
 
     display: none;
     gap: 20px;
@@ -236,6 +247,8 @@ body {
 
     transition: 0.2s;
     z-index: 30;
+
+    background-color: aqua;
 }
 
 .next button:hover {
