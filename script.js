@@ -29,6 +29,61 @@ const trilhos = document.querySelector(".trilhos");
 const trem = document.querySelector(".trem");
 const bonecoAlavanca = document.querySelector(".boneco-alavanca");
 const bonecoAlavanca1 = document.querySelector(".boneco-alavanca1");
+
+//animação do trem
+
+let tremX = 50; // Posição inicial no CSS (left: 50px)
+let tremY = 25;  // Posição inicial no CSS (top: 25px)
+let emMovimento = false; 
+
+function moverTrem(direcao) {
+    if (emMovimento) return; // Evita iniciar duas animações ao mesmo tempo
+    emMovimento = true;
+
+    const pontoInicioDesvio = 50; // Ponto onde o trem desce para a curva
+    const pontoInicioSubida = 420; // Ponto onde o trem começa a subir
+    const alturaFinalTrilho = 63;  // Altura final desejada
+
+    // Define a posição Y final (reta ou desviada)
+    const destinoY = (direcao === "puxou") ? -50 : 25; 
+    const destinoX = 1275; // Posição final na direita
+    const velocidadeX = 10; // Pixels por frame na horizontal
+
+    function animar() {
+        // Atualiza a posição X
+        if (tremX < destinoX) {
+            tremX += velocidadeX;
+            trem.style.left = tremX + 'px';
+        }
+
+        if (direcao === "puxou") {
+            // Etapa 1: Desce até a inclinação (tremY + 4.5)
+            if (tremX >= pontoInicioDesvio && tremX < pontoInicioSubida) {
+                tremY += 4.1;
+                trem.style.top = tremY + 'px';
+        }
+        // Etapa 2: Sobe de volta em direção à altura desejada (tremY - 4.5)
+            else if (tremX >= pontoInicioSubida && tremY > alturaFinalTrilho) {
+                tremY -= 4.5;
+                trem.style.top = tremY + 'px';
+            }
+        } else {
+             tremY += 3.7;
+            trem.style.top = tremY + 'px';
+        }
+
+        // Continua a animação se não chegou ao fim
+        if (tremX < destinoX) {
+            requestAnimationFrame(animar);
+        } else {
+            // Chegou ao destino: exibe o botão "Próxima"
+            emMovimento = false;
+        }
+    }
+
+    requestAnimationFrame(animar);
+}
+
 // PESSOAS
 
 const cincoPessoas = document.getElementById("cincoPessoas");
@@ -196,13 +251,17 @@ function continuar() {
 // ESCOLHA: PUXAR
 
 botaoPuxar.addEventListener("click", function() {
+    botoes.classList.remove("visivel")
     iniciarTurno();
+    moverTrem("puxou")
 });
 
 
 // ESCOLHA: NÃO PUXAR
 
 botaoNaoPuxar.addEventListener("click", function() {
+    botoes.classList.remove("visivel");
+    moverTrem("nao_puxou");
     iniciarTurno();
 });
 
@@ -215,6 +274,12 @@ botaoNext.addEventListener("click", function() {
     containerNext.style.display = "none";
     bonecoAlavanca1.style.display = "none";
     bonecoAlavanca1.classList.remove("visivel1");
+
+    // Reseta a posição física do trem para a próxima pergunta
+tremX = 50;
+tremY = 25;
+trem.style.left = '50px';
+trem.style.top = '25px';
 
     perguntaAtual++;
 
