@@ -265,6 +265,28 @@ body {
     pointer-events: none;
 }
 
+.splash {
+position: absolute;
+    width: 175px;
+    height: auto;
+
+    left: 870px;
+    top: 77px;
+    z-index: 2;
+}
+
+.splash2 {
+    position: absolute;
+    width: 150px;
+    height: auto;
+
+    width: 175px;
+    left: 780px;
+    top: 299px;
+    z-index: 2;
+}
+
+
 #cincoPessoas {
     width: 180px;
     left: 800px;

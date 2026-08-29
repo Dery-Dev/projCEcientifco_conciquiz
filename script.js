@@ -29,6 +29,13 @@ const trilhos = document.querySelector(".trilhos");
 const trem = document.querySelector(".trem");
 const bonecoAlavanca = document.querySelector(".boneco-alavanca");
 const bonecoAlavanca1 = document.querySelector(".boneco-alavanca1");
+const splat = document.getElementById("splash")
+const splat2 = document.getElementById("splash2")
+
+splat2.style.display = "none"
+splat.style.display = "none"
+
+//animação do splash
 
 //animação do trem
 
@@ -45,9 +52,14 @@ function moverTrem(direcao) {
     const alturaFinalTrilho = 63;  // Altura final desejada
 
     // Define a posição Y final (reta ou desviada)
-    const destinoY = (direcao === "puxou") ? -50 : 25; 
     const destinoX = 1275; // Posição final na direita
     const velocidadeX = 10; // Pixels por frame na horizontal
+
+    // Posição no eixo X onde ocorre a colisão com o grupo/pessoa no trilho
+    const pontoColisaoDesvio = 840; // Trilho de cima (Puxou a alavanca)
+    const pontoColisaoReta = 750;   // Trilho de baixo (Não puxou)
+
+    let jaColidiu = false;
 
     function animar() {
         // Atualiza a posição X
@@ -66,10 +78,34 @@ function moverTrem(direcao) {
             else if (tremX >= pontoInicioSubida && tremY > alturaFinalTrilho) {
                 tremY -= 4.5;
                 trem.style.top = tremY + 'px';
+            } 
+            
+        // Checa colisão no trilho desviado (Cima)
+            if (tremX >= pontoColisaoDesvio && !jaColidiu) {
+                jaColidiu = true;
+                splat.style.display = "block"; // Exibe o splash do desvio
+                umaPessoa.style.display = "none";
+                cat.style.display = "none";
+                monalisa.style.display = "none";
+                pessoaRica.style.display = "none";
             }
+
         } else {
              tremY += 3.7;
             trem.style.top = tremY + 'px';
+            
+            // Checa colisão no trilho reto (Baixo)
+            if (tremX >= pontoColisaoReta && !jaColidiu) {
+                jaColidiu = true;
+                splat2.style.display = "block"; // Exibe o splash do caminho reto
+                
+                // Esconde o grupo principal atingido
+                cincoPessoas.style.display = "none";
+                cincodormindo.style.display = "none";
+                idosos.style.display = "none";
+                politic.style.display = "none";
+                enemy.style.display = "none";
+            }
         }
 
         // Continua a animação se não chegou ao fim
@@ -252,6 +288,7 @@ function continuar() {
 
 botaoPuxar.addEventListener("click", function() {
     botoes.classList.remove("visivel")
+    virar();
     iniciarTurno();
     moverTrem("puxou")
 });
@@ -261,6 +298,7 @@ botaoPuxar.addEventListener("click", function() {
 
 botaoNaoPuxar.addEventListener("click", function() {
     botoes.classList.remove("visivel");
+    continuar();
     moverTrem("nao_puxou");
     iniciarTurno();
 });
@@ -274,6 +312,8 @@ botaoNext.addEventListener("click", function() {
     containerNext.style.display = "none";
     bonecoAlavanca1.style.display = "none";
     bonecoAlavanca1.classList.remove("visivel1");
+    splat.style.display = "none"
+    splat2.style.display = "none"
 
     // Reseta a posição física do trem para a próxima pergunta
 tremX = 50;
