@@ -53,7 +53,8 @@ function moverTrem(direcao) {
 
     // Define a posição Y final (reta ou desviada)
     const destinoX = 1275; // Posição final na direita
-    const velocidadeX = 10; // Pixels por frame na horizontal
+    const posF = 1260
+    const velocidadeX = 11; // Pixels por frame na horizontal
 
     // Posição no eixo X onde ocorre a colisão com o grupo/pessoa no trilho
     const pontoColisaoDesvio = 840; // Trilho de cima (Puxou a alavanca)
@@ -106,6 +107,8 @@ function moverTrem(direcao) {
                 politic.style.display = "none";
                 enemy.style.display = "none";
             }
+        } if (tremX == posF) {
+            trem.style.display = "none"
         }
 
         // Continua a animação se não chegou ao fim
@@ -314,7 +317,7 @@ botaoNext.addEventListener("click", function() {
     bonecoAlavanca1.classList.remove("visivel1");
     splat.style.display = "none"
     splat2.style.display = "none"
-
+    trem.style.display = "block"
     // Reseta a posição física do trem para a próxima pergunta
 tremX = 50;
 tremY = 25;
