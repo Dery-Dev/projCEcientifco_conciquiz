@@ -388,7 +388,7 @@ position: absolute;
 
 /* Zera margens do navegador para não descentralizar */
 .final1 h1, .final2 h1, .final3 h1 {
-    font-size: 48px;
+    font-size: 80px;
     margin: 0 0 15px 0;
     font-family: sans-serif;
 }
